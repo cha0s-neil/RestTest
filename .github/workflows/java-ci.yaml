@@ -1,0 +1,26 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11' # Match your project's Java version
+          distribution: 'temurin'
+          cache: maven # or 'gradle' if using Gradle
+
+      - name: Build and Test
+        run: |
+          mvn -B clean install # For Maven
+          # OR use Gradle: ./gradlew build
