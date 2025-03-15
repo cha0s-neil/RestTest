@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: '11' # Match your project's Java version
           distribution: 'temurin'
-          cache: maven # or 'gradle' if using Gra
+          cache: maven # or 'gradle' if using Gradle
 
       - name: Build and Test
         run: |
