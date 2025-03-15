@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11' # Match your project's Java version
-          distribution: 'temurin'
+          distribution: 'temurin'##new
           cache: maven # or 'gradle' if using Gradle
 
       - name: Build and Test
